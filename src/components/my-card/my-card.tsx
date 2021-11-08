@@ -18,6 +18,11 @@ export class MyCard {
   }
 
   render() {
-    return <div>Component</div>;
+    return (
+      <div>
+        <p>Parent Component</p>
+        <my-card-item></my-card-item>
+      </div>
+    );
   }
 }
