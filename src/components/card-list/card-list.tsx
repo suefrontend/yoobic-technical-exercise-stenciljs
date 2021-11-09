@@ -30,7 +30,7 @@ export class CardList {
 
   render() {
     const renderList = this.result.map(item => {
-      return <card-list-item title={item.imageTitle} imageUrl={item.imageUrl}></card-list-item>;
+      return <card-list-item imageTitle={item.imageTitle} imageUrl={item.imageUrl}></card-list-item>;
     });
 
     return <ul>{renderList}</ul>;
