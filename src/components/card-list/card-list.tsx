@@ -14,9 +14,9 @@ export class CardList {
 
   async fetchData() {
     const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=20');
-
     try {
       const data = await response.json();
+
       this.result = data.map(item => {
         return {
           imageTitle: item['title'],
@@ -30,7 +30,7 @@ export class CardList {
 
   render() {
     const renderList = this.result.map(item => {
-      return <my-card-item title={item.imageTitle} imageUrl={item.imageUrl}></my-card-item>;
+      return <card-list-item title={item.imageTitle} imageUrl={item.imageUrl}></card-list-item>;
     });
 
     return <ul>{renderList}</ul>;
