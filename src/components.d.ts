@@ -9,8 +9,8 @@ export namespace Components {
     interface CardList {
     }
     interface CardListItem {
+        "imageTitle": string;
         "imageUrl": string;
-        "title": string;
     }
 }
 declare global {
@@ -35,8 +35,8 @@ declare namespace LocalJSX {
     interface CardList {
     }
     interface CardListItem {
+        "imageTitle"?: string;
         "imageUrl"?: string;
-        "title"?: string;
     }
     interface IntrinsicElements {
         "card-list": CardList;

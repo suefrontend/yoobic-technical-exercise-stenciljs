@@ -6,14 +6,14 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class CardListItem {
-  @Prop() title: string = '';
+  @Prop() imageTitle: string = '';
   @Prop() imageUrl: string = '';
 
   render() {
     return (
       <li>
-        <img src={this.imageUrl} alt={this.title} />
-        <p>{this.title}</p>
+        <img src={this.imageUrl} alt={this.imageTitle} />
+        <p>{this.imageTitle}</p>
       </li>
     );
   }
