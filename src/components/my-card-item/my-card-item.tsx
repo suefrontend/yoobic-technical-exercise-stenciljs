@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'my-card-item',
@@ -6,7 +6,15 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class MyCardItem {
+  @Prop() title: string = '';
+  @Prop() imageUrl: string = '';
+
   render() {
-    return <div>MyCardItem Component</div>;
+    return (
+      <div>
+        {this.title}
+        <img src={this.imageUrl} alt="" />
+      </div>
+    );
   }
 }

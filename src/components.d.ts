@@ -9,6 +9,8 @@ export namespace Components {
     interface MyCard {
     }
     interface MyCardItem {
+        "imageUrl": string;
+        "title": string;
     }
 }
 declare global {
@@ -33,6 +35,8 @@ declare namespace LocalJSX {
     interface MyCard {
     }
     interface MyCardItem {
+        "imageUrl"?: string;
+        "title"?: string;
     }
     interface IntrinsicElements {
         "my-card": MyCard;
