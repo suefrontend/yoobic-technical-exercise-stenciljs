@@ -6,7 +6,7 @@ import { Component, h, State } from '@stencil/core';
   shadow: true,
 })
 export class MyCard {
-  @State() result: { name: string; marketOpen: string }[] = [];
+  @State() result: { title: string; imageUrl: string }[] = [];
 
   componentWillLoad() {
     fetch('https://jsonplaceholder.typicode.com/photos')
@@ -18,11 +18,10 @@ export class MyCard {
   }
 
   render() {
-    return (
-      <div>
-        <p>Parent Component</p>
-        <my-card-item></my-card-item>
-      </div>
-    );
+    const renderList = this.result.map(item => {
+      return <my-card-item title={item.title} imageUrl={item.photoUrl}></my-card-item>;
+    });
+
+    return <div>{renderList}</div>;
   }
 }
