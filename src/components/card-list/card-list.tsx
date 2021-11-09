@@ -25,6 +25,8 @@ export class CardList {
       });
     } catch (error) {
       console.log('error: ', error);
+    } finally {
+      console.log('Result has been delivered.');
     }
   }
 
