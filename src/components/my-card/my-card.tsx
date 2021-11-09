@@ -9,17 +9,26 @@ export class MyCard {
   @State() result: { title: string; imageUrl: string }[] = [];
 
   componentWillLoad() {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(response => response.json())
-      .then(json => {
-        this.result = json;
-        console.log(this.result);
+    return this.fetchData();
+  }
+
+  async fetchData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=20');
+
+    if (response.status === 200) {
+      const data = await response.json();
+      this.result = data.map(item => {
+        return {
+          title: item['title'],
+          imageUrl: item['url'],
+        };
       });
+    }
   }
 
   render() {
     const renderList = this.result.map(item => {
-      return <my-card-item title={item.title} imageUrl={item.photoUrl}></my-card-item>;
+      return <my-card-item title={item.title} imageUrl={item.imageUrl}></my-card-item>;
     });
 
     return <div>{renderList}</div>;
