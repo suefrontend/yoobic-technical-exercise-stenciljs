@@ -31,6 +31,6 @@ export class MyCard {
       return <my-card-item title={item.title} imageUrl={item.imageUrl}></my-card-item>;
     });
 
-    return <div>{renderList}</div>;
+    return <ul>{renderList}</ul>;
   }
 }

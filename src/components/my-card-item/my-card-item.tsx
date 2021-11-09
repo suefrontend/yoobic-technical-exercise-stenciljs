@@ -11,10 +11,10 @@ export class MyCardItem {
 
   render() {
     return (
-      <div>
+      <li>
         {this.title}
         <img src={this.imageUrl} alt="" />
-      </div>
+      </li>
     );
   }
 }
