@@ -20,7 +20,7 @@ export class MyCard {
       this.result = data.map(item => {
         return {
           title: item['title'],
-          imageUrl: item['url'],
+          imageUrl: item['thumbnailUrl'],
         };
       });
     }

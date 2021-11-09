@@ -12,8 +12,8 @@ export class MyCardItem {
   render() {
     return (
       <li>
-        {this.title}
-        <img src={this.imageUrl} alt="" />
+        <img src={this.imageUrl} alt={this.title} />
+        <p>{this.title}</p>
       </li>
     );
   }
