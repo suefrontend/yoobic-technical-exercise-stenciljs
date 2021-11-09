@@ -6,49 +6,49 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyCard {
+    interface CardList {
     }
-    interface MyCardItem {
+    interface CardListItem {
         "imageUrl": string;
         "title": string;
     }
 }
 declare global {
-    interface HTMLMyCardElement extends Components.MyCard, HTMLStencilElement {
+    interface HTMLCardListElement extends Components.CardList, HTMLStencilElement {
     }
-    var HTMLMyCardElement: {
-        prototype: HTMLMyCardElement;
-        new (): HTMLMyCardElement;
+    var HTMLCardListElement: {
+        prototype: HTMLCardListElement;
+        new (): HTMLCardListElement;
     };
-    interface HTMLMyCardItemElement extends Components.MyCardItem, HTMLStencilElement {
+    interface HTMLCardListItemElement extends Components.CardListItem, HTMLStencilElement {
     }
-    var HTMLMyCardItemElement: {
-        prototype: HTMLMyCardItemElement;
-        new (): HTMLMyCardItemElement;
+    var HTMLCardListItemElement: {
+        prototype: HTMLCardListItemElement;
+        new (): HTMLCardListItemElement;
     };
     interface HTMLElementTagNameMap {
-        "my-card": HTMLMyCardElement;
-        "my-card-item": HTMLMyCardItemElement;
+        "card-list": HTMLCardListElement;
+        "card-list-item": HTMLCardListItemElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyCard {
+    interface CardList {
     }
-    interface MyCardItem {
+    interface CardListItem {
         "imageUrl"?: string;
         "title"?: string;
     }
     interface IntrinsicElements {
-        "my-card": MyCard;
-        "my-card-item": MyCardItem;
+        "card-list": CardList;
+        "card-list-item": CardListItem;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-card": LocalJSX.MyCard & JSXBase.HTMLAttributes<HTMLMyCardElement>;
-            "my-card-item": LocalJSX.MyCardItem & JSXBase.HTMLAttributes<HTMLMyCardItemElement>;
+            "card-list": LocalJSX.CardList & JSXBase.HTMLAttributes<HTMLCardListElement>;
+            "card-list-item": LocalJSX.CardListItem & JSXBase.HTMLAttributes<HTMLCardListItemElement>;
         }
     }
 }

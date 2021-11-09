@@ -1,11 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-card-item',
-  styleUrl: 'my-card-item.css',
+  tag: 'card-list-item',
+  styleUrl: 'card-list-item.css',
   shadow: true,
 })
-export class MyCardItem {
+export class CardListItem {
   @Prop() title: string = '';
   @Prop() imageUrl: string = '';
 

@@ -1,11 +1,11 @@
 import { Component, h, State } from '@stencil/core';
 
 @Component({
-  tag: 'my-card',
-  styleUrl: 'my-card.css',
+  tag: 'card-list',
+  styleUrl: 'card-list.css',
   shadow: true,
 })
-export class MyCard {
+export class CardList {
   @State() result: { title: string; imageUrl: string }[] = [];
 
   componentWillLoad() {
